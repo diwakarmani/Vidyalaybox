@@ -11,6 +11,24 @@ export const protectedRoutes = [
         component: lazy(() => import('@/views/Home')),
         authority: [],
     },
+    {
+        key: 'medium',
+        path: '/medium',
+        component: lazy(() => import('@/views/forms/MediumForm')),
+        authority: [],
+    },
+    {
+        key: 'section',
+        path: '/section',
+        component: lazy(() => import('@/views/forms/SectionForm')),
+        authority: [],
+    },
+    {
+        key: 'subject',
+        path: '/subject',
+        component: lazy(() => import('@/views/forms/SubjectForm')),
+        authority: [],
+    },
     /** Example purpose only, please remove */
     {
         key: 'singleMenuItem',
