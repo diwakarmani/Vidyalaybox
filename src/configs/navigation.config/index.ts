@@ -77,6 +77,16 @@ const navigationConfig: NavigationTree[] = [
                         authority: [],
                         subMenu: [],
                     },
+                    {
+                        key: 'academic.collapse.class',
+                        path: '/class',
+                        title: 'Class',
+                        translateKey: 'nav.academic.collapse.class',
+                        icon: '',
+                        type: NAV_ITEM_TYPE_ITEM,
+                        authority: [],
+                        subMenu: [],
+                    },
 
                 ],
             },

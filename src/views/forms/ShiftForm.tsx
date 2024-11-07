@@ -3,7 +3,6 @@ import { useState } from 'react'
 import DeleteIcon from '@mui/icons-material/Delete'
 import EditIcon from '@mui/icons-material/Edit'
 import CheckIcon from '@mui/icons-material/Check'
-import { Alert } from '@mui/material'
 
 interface FeatureClass {
     id: number

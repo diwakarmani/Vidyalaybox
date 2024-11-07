@@ -41,6 +41,12 @@ export const protectedRoutes = [
         component: lazy(() => import('@/views/forms/ShiftForm')),
         authority: [],
     },
+    {
+        key: 'class',
+        path: '/class',
+        component: lazy(() => import('@/views/forms/ClassForm')),
+        authority: [],
+    },
     /** Example purpose only, please remove */
     {
         key: 'singleMenuItem',
