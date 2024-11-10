@@ -29,6 +29,24 @@ export const protectedRoutes = [
         component: lazy(() => import('@/views/forms/SubjectForm')),
         authority: [],
     },
+    {
+        key: 'stream',
+        path: '/stream',
+        component: lazy(() => import('@/views/forms/StreamForm')),
+        authority: [],
+    },
+    {
+        key: 'shift',
+        path: '/shift',
+        component: lazy(() => import('@/views/forms/ShiftForm')),
+        authority: [],
+    },
+    {
+        key: 'class',
+        path: '/class',
+        component: lazy(() => import('@/views/forms/ClassForm')),
+        authority: [],
+    },
     /** Example purpose only, please remove */
     {
         key: 'singleMenuItem',
