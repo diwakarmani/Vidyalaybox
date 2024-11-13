@@ -87,6 +87,16 @@ const navigationConfig: NavigationTree[] = [
                         authority: [],
                         subMenu: [],
                     },
+                    {
+                        key: 'academic.collapse.assignSubToClass',
+                        path: '/assignSubToClass',
+                        title: 'Class Subject',
+                        translateKey: 'nav.academic.collapse.assignSubToClass',
+                        icon: '',
+                        type: NAV_ITEM_TYPE_ITEM,
+                        authority: [],
+                        subMenu: [],
+                    },
 
                 ],
             },
