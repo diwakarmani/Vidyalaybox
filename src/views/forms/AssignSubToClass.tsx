@@ -248,7 +248,7 @@ const AssignSubToClass = () => {
                         </select>
                     </div>
                     <Button
-                        className="items-center justify-center flex my-4 w-1/4 cursor-pointer"
+                        className="items-center justify-center flex my-4 lg:w-1/4 xs:w-full cursor-pointer"
                         size="xs"
                         variant="twoTone"
                         icon={<AddIcon fontSize="small" className="" />}
@@ -367,7 +367,7 @@ const AssignSubToClass = () => {
                         </select>
                     </div>
                     <Button
-                        className="items-center justify-center flex my-4 w-1/4 cursor-pointer"
+                        className="items-center justify-center flex my-4 lg:w-1/4 xs:w-full cursor-pointer"
                         size="xs"
                         variant="twoTone"
                         icon={<AddIcon fontSize="small" className="" />}
@@ -388,7 +388,7 @@ const AssignSubToClass = () => {
                     />
                 </div>
                 <Button
-                        className="items-center justify-center flex my-4 w-1/4 cursor-pointer"
+                        className="items-center justify-center flex my-4 lg:w-1/4 xs:w-full cursor-pointer"
                         size="sm"
                         variant="solid"
                         onClick={() => handleSubmit()}

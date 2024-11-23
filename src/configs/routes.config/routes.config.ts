@@ -53,6 +53,12 @@ export const protectedRoutes = [
         component: lazy(() => import('@/views/forms/AssignSubToClass')),
         authority: [],
     },
+    {
+        key: 'classSectionAndTeacher',
+        path: '/classSectionAndTeacher',
+        component: lazy(() => import('@/views/forms/ClassSectionAndTeacher')),
+        authority: [],
+    },
     /** Example purpose only, please remove */
     {
         key: 'singleMenuItem',
