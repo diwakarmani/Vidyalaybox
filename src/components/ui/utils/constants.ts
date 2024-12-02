@@ -74,3 +74,7 @@ export const DROPDOWN_ITEM_TYPE: Record<
 }
 
 export const DAY_DURATION = 86400000
+
+export const SORT_BY=['All', 'First Name','Last Name','Admission Number', 'Admission Date', 'Date of Birth']
+export const ORDER_BY=[ 'Ascending','Descending']
+export const CLASSES=[ 'All','7th A','8th A', '8th B']

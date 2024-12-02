@@ -65,6 +65,12 @@ export const protectedRoutes = [
         component: lazy(() => import('@/views/academics/TransferAndPromoteStudent')),
         authority: [],
     },
+    {
+        key: 'assignRollNumber',
+        path: '/assignRollNumber',
+        component: lazy(() => import('@/views/academics/AssignRollNumber')),
+        authority: [],
+    },
     /** Example purpose only, please remove */
     {
         key: 'singleMenuItem',
