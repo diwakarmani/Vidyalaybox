@@ -28,15 +28,27 @@ type SignUpFormSchema = {
 }
 
 const validationSchema = Yup.object().shape({
-    userName: Yup.string().required('Please enter your user name'),
+    userName: Yup.string().required('Please enter your school name'),
     email: Yup.string()
         .email('Invalid email')
         .required('Please enter your email'),
-    password: Yup.string().required('Please enter your password'),
-    confirmPassword: Yup.string().oneOf(
-        [Yup.ref('password')],
-        'Your passwords do not match'
-    ),
+    mobile: Yup.string()
+        .matches(/^[0-9]{10}$/, 'Phone number must be 10 digits')
+        .required('Please enter your mobile number'),
+    address: Yup.string().required('Please enter your address'),
+    firstName: Yup.string().required("Please enter admin's first name"),
+    lastName: Yup.string().required("Please enter admin's last name"),
+    adminEmail: Yup.string()
+        .email('Invalid email')
+        .required("Please enter admin's email"),
+    adminMobile: Yup.string()
+        .matches(/^[0-9]{10}$/, 'Phone number must be 10 digits')
+        .required("Please enter admin's mobile number"),
+    // password: Yup.string().required('Please enter your password'),
+    // confirmPassword: Yup.string().oneOf(
+    //     [Yup.ref('password')],
+    //     'Your passwords do not match'
+    // ),
 })
 
 const SignUpForm = (props: SignUpFormProps) => {
@@ -60,7 +72,7 @@ const SignUpForm = (props: SignUpFormProps) => {
             adminEmail,
             adminMobile,
         } = values
-        console.log("in here")
+        console.log('in here')
         setSubmitting(true)
         const result = await signUp({
             userName,
@@ -72,14 +84,16 @@ const SignUpForm = (props: SignUpFormProps) => {
             adminEmail,
             adminMobile,
         })
-        console.log({userName,
+        console.log({
+            userName,
             email,
             mobile,
             address,
             firstName,
             lastName,
             adminEmail,
-            adminMobile})
+            adminMobile,
+        })
         if (result?.status === 'failed') {
             setMessage(result.message)
         }
@@ -119,8 +133,8 @@ const SignUpForm = (props: SignUpFormProps) => {
                     }}
                 >
                     {({ touched, errors, isSubmitting }) => (
+                        <>
                             <Form>
-                                
                                 <FormContainer className="flex flex-col mt-4">
                                     <div className="flex w-full justify-between">
                                         <FormItem
@@ -218,12 +232,11 @@ const SignUpForm = (props: SignUpFormProps) => {
                                         </FormItem>
                                     </div>
                                 </FormContainer>
-                            
-                            <div className="h-0.5 my-2 bg-gray-400 rounded"></div>
-                            <div className="mt-4">
-                                <h4>Add Admin</h4>
 
-                              
+                                <div className="h-0.5 my-2 bg-gray-400 rounded"></div>
+                                <div className="mt-4">
+                                    <h4>Add Admin</h4>
+
                                     <FormContainer className="flex flex-col my-4">
                                         <div className="flex w-full justify-between">
                                             <FormItem
@@ -298,29 +311,26 @@ const SignUpForm = (props: SignUpFormProps) => {
                                                 />
                                             </FormItem>
                                         </div>
-                                        
                                     </FormContainer>
                                 </div>
                                 <Button
-                                            
-                                            loading={isSubmitting}
-                                            variant="solid"
-                                            type="submit"
-                                        >
-                                            {isSubmitting
-                                                ? 'Creating Account...'
-                                                : 'Sign Up'}
-                                        </Button>
-                                        <div className="mt-4 text-center">
-                                            <span>
-                                                Already have an account?{' '}
-                                            </span>
-                                            <ActionLink to={signInUrl}>
-                                                Sign in
-                                            </ActionLink>
-                                        </div>
-                                </Form>
-                            
+                                    block
+                                    loading={isSubmitting}
+                                    variant="solid"
+                                    type="submit"
+                                >
+                                    {isSubmitting
+                                        ? 'Creating Account...'
+                                        : 'Sign Up'}
+                                </Button>
+                                <div className="mt-4 text-center">
+                                    <span>Already have an account? </span>
+                                    <ActionLink to={signInUrl}>
+                                        Sign in
+                                    </ActionLink>
+                                </div>
+                            </Form>
+                        </>
                     )}
                 </Formik>
             </div>
