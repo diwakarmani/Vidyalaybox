@@ -130,6 +130,39 @@ const navigationConfig: NavigationTree[] = [
 
                 ],
             },
+            {
+                key: 'students.collapse',
+                path: '',
+                title: 'Students',
+                translateKey: 'nav.student.collapse.collapse',
+                icon: 'students',
+                type: NAV_ITEM_TYPE_COLLAPSE,
+                authority: [],
+                subMenu: [
+                    {
+                        key: 'student.collapse.academicForm',
+                        path: '/academicForm',
+                        title: 'Academic Form',
+                        translateKey: 'nav.students.collapse.academicForm',
+                        icon: '',
+                        type: NAV_ITEM_TYPE_ITEM,
+                        authority: [],
+                        subMenu: [],
+                    },
+                    {
+                        key: 'student.collapse.studentAdmission',
+                        path: '/studentAdmission',
+                        title: 'Student Admission',
+                        translateKey: 'nav.students.collapse.studentAdmission',
+                        icon: '',
+                        type: NAV_ITEM_TYPE_ITEM,
+                        authority: [],
+                        subMenu: [],
+                    },
+                    
+
+                ],
+            }
     
 
 ]

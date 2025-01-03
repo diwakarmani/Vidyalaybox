@@ -5,7 +5,6 @@ import EditIcon from '@mui/icons-material/Edit'
 import CheckIcon from '@mui/icons-material/Check'
 import AddIcon from '@mui/icons-material/Add'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
-import DropdownMenu from '@/components/ui/Dropdown/DropdownMenu'
 import DropdownItem from '@/components/ui/Dropdown/DropdownItem'
 
 interface Class {

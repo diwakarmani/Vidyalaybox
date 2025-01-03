@@ -72,19 +72,8 @@ const SignUpForm = (props: SignUpFormProps) => {
             adminEmail,
             adminMobile,
         } = values
-        console.log('in here')
         setSubmitting(true)
         const result = await signUp({
-            userName,
-            email,
-            mobile,
-            address,
-            firstName,
-            lastName,
-            adminEmail,
-            adminMobile,
-        })
-        console.log({
             userName,
             email,
             mobile,

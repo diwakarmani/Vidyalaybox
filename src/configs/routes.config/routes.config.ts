@@ -71,11 +71,16 @@ export const protectedRoutes = [
         component: lazy(() => import('@/views/academics/AssignRollNumber')),
         authority: [],
     },
-    /** Example purpose only, please remove */
     {
-        key: 'singleMenuItem',
-        path: '/single-menu-view',
-        component: lazy(() => import('@/views/demo/SingleMenuView')),
+        key: 'academicForm',
+        path: '/academicForm',
+        component: lazy(() => import('@/views/students/AcademicForm')),
+        authority: [],
+    },
+    {
+        key: 'studentAdmission',
+        path: '/studentAdmission',
+        component: lazy(() => import('@/views/students/StudentAdmission')),
         authority: [],
     },
     {
